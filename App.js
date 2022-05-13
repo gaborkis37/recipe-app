@@ -8,9 +8,12 @@ import { enableScreens } from "react-native-screens";
 
 enableScreens();
 
+//TODO: Remove ignore logs
 LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
 ]);
+
+LogBox.ignoreLogs(["EventEmitter.removeListener"]);
 
 const fetchFonts = () => {
   return Font.loadAsync({
